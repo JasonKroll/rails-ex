@@ -428,20 +428,20 @@
       "displayName": "Memory Limit",
       "required": true,
       "description": "Maximum amount of memory the Rails container can use.",
-      "value": "512Mi"
+      "value": "256Mi"
     },
     {
       "name": "MEMORY_POSTGRESQL_LIMIT",
       "displayName": "Memory Limit (PostgreSQL)",
       "required": true,
       "description": "Maximum amount of memory the PostgreSQL container can use.",
-      "value": "512Mi"
+      "value": "256Mi"
     },
     {
       "name": "VOLUME_CAPACITY",
       "displayName": "Volume Capacity",
-      "description": "Volume space available for data, e.g. 512Mi, 2Gi",
-      "value": "1Gi",
+      "description": "Volume space available for data, e.g. 256Mi, 2Gi",
+      "value": "2Gi",
       "required": true
     },
     {
