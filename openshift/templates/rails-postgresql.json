@@ -2,7 +2,7 @@
   "kind": "Template",
   "apiVersion": "v1",
   "metadata": {
-    "name": "rails-postgresql-example",
+    "name": "rails-pg-example",
     "annotations": {
       "description": "An example Rails application with a PostgreSQL database",
       "tags": "quickstart,ruby,rails,postgresql",
@@ -10,7 +10,7 @@
     }
   },
   "labels": {
-    "template": "rails-postgresql-example"
+    "template": "rails-pg-example"
   },
   "objects": [
     {
@@ -148,7 +148,7 @@
             "imageChangeParams": {
               "automatic": true,
               "containerNames": [
-                "rails-postgresql-example"
+                "rails-pg-example"
               ],
               "from": {
                 "kind": "ImageStreamTag",
@@ -174,7 +174,7 @@
           "spec": {
             "containers": [
               {
-                "name": "rails-postgresql-example",
+                "name": "rails-pg-example",
                 "image": " ",
                 "ports": [
                   {
@@ -395,7 +395,7 @@
       "displayName": "Name",
       "description": "The name assigned to all of the frontend objects defined in this template.",
       "required": true,
-      "value": "rails-postgresql-example"
+      "value": "rails-pg-example"
     },
     {
       "name": "NAMESPACE",
