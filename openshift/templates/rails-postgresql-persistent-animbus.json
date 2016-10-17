@@ -2,7 +2,7 @@
     "kind": "Template",
     "apiVersion": "v1",
     "metadata": {
-        "name": "postgresql-persistent",
+        "name": "rails-postgresql-persistent-animbus",
         "creationTimestamp": null
     },
     "objects": [
@@ -319,7 +319,7 @@
             "kind": "Pod",
             "apiVersion": "v1",
             "metadata": {
-                "generateName": "${DATABASE_SERVICE_NAME}",
+                "generateName": "${DATABASE_SERVICE_NAME}-1-",
                 "creationTimestamp": null,
                 "labels": {
                     "deployment": "${DATABASE_SERVICE_NAME}",

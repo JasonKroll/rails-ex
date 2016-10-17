@@ -285,13 +285,6 @@
       "value": "256Mi"
     },
     {
-      "name": "VOLUME_CAPACITY",
-      "displayName": "Volume Capacity",
-      "description": "Volume space available for data, e.g. 256Mi, 2Gi",
-      "value": "2Gi",
-      "required": true
-    },
-    {
       "name": "SOURCE_REPOSITORY_URL",
       "displayName": "Git Repository URL",
       "required": true,
@@ -358,14 +351,12 @@
     {
       "name": "DATABASE_USER",
       "displayName": "Database Username",
-      "generate": "expression",
-      "from": "user[A-Z0-9]{3}"
+      "value": "${DATABASE_USER}"
     },
     {
       "name": "DATABASE_PASSWORD",
       "displayName": "Database Password",
-      "generate": "expression",
-      "from": "[a-zA-Z0-9]{8}"
+      "value": "${DATABASE_PASSWORD}"
     },
     {
       "name": "DATABASE_NAME",
