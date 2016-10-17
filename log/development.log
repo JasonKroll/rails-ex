@@ -483,3 +483,173 @@ Cannot render console from 10.240.0.33! Allowed networks: 127.0.0.1, ::1, 127.0.
 
 Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 10.240.0.240 at 2016-10-17 23:10:13 +0000
 Cannot render console from 10.240.0.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 10.240.1.16 at 2016-10-17 23:36:23 +0000
+Cannot render console from 10.240.1.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 466ms (Views: 451.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for 10.240.1.16 at 2016-10-17 23:36:26 +0000
+Cannot render console from 10.240.1.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.3ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 323ms (Views: 311.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/articles/new" for 10.240.1.16 at 2016-10-17 23:36:28 +0000
+Cannot render console from 10.240.1.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#new as HTML
+  Rendered articles/_form.html.erb (35.7ms)
+  Rendered articles/new.html.erb within layouts/application (43.8ms)
+Completed 200 OK in 333ms (Views: 331.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/articles" for 10.240.1.16 at 2016-10-17 23:36:32 +0000
+Cannot render console from 10.240.1.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5tZ0HXstI+ciBJaY2cxWXX+ACtvv5PZpKdoytwpp4glv2qd1RUxiIxhrJeP04/fuScVk5BexMmk10JS40pPRZw==", "article"=>{"title"=>"sadf sad f", "text"=>"asdf as f", "name"=>"asd fasd f"}, "commit"=>"Submit"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "articles" ("title", "text", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "sadf sad f"], ["text", "asdf as f"], ["name", "asd fasd f"], ["created_at", "2016-10-17 23:36:32.290896"], ["updated_at", "2016-10-17 23:36:32.290896"]]
+  [1m[36m (53.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://docker-test-krolly.c9users.io:8080/articles/2
+Completed 302 Found in 68ms (ActiveRecord: 54.4ms)
+
+
+Started POST "/articles" for 10.240.1.16 at 2016-10-17 23:36:32 +0000
+Cannot render console from 10.240.1.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5tZ0HXstI+ciBJaY2cxWXX+ACtvv5PZpKdoytwpp4glv2qd1RUxiIxhrJeP04/fuScVk5BexMmk10JS40pPRZw==", "article"=>{"title"=>"sadf sad f", "text"=>"asdf as f", "name"=>"asd fasd f"}, "commit"=>"Submit"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "articles" ("title", "text", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "sadf sad f"], ["text", "asdf as f"], ["name", "asd fasd f"], ["created_at", "2016-10-17 23:36:32.491943"], ["updated_at", "2016-10-17 23:36:32.491943"]]
+  [1m[35m (11.1ms)[0m  commit transaction
+Redirected to http://docker-test-krolly.c9users.io:8080/articles/3
+Completed 302 Found in 19ms (ActiveRecord: 11.7ms)
+
+
+Started GET "/articles/3" for 10.240.1.16 at 2016-10-17 23:36:32 +0000
+Cannot render console from 10.240.1.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mArticle Load (0.5ms)[0m  [1mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?  [["article_id", 3]]
+  Rendered collection (0.0ms)
+  Rendered comments/_form.html.erb (24.3ms)
+  Rendered articles/show.html.erb within layouts/application (108.3ms)
+Completed 200 OK in 507ms (Views: 484.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/articles" for 10.240.1.16 at 2016-10-17 23:36:35 +0000
+Cannot render console from 10.240.1.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 273ms (Views: 271.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles" for 10.240.0.214 at 2016-10-17 23:37:09 +0000
+Cannot render console from 10.240.0.214! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.4ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 299ms (Views: 297.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/bootstrap/alert.self-742145c5bb847aafdadc6e339be795628f8bc25f177e851f03a8c42278eb0312.js?body=1" for 10.240.1.16 at 2016-10-17 23:37:10 +0000
+Cannot render console from 10.240.1.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/articles.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.240.0.33 at 2016-10-17 23:37:10 +0000
+Cannot render console from 10.240.0.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/collapse.self-2eb697f62b587bb786ff940d82dd4be88cdeeaf13ca128e3da3850c5fcaec301.js?body=1" for 10.240.1.16 at 2016-10-17 23:37:11 +0000
+Cannot render console from 10.240.1.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.240.1.12 at 2016-10-17 23:37:11 +0000
+Cannot render console from 10.240.1.12! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/comments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.240.0.5 at 2016-10-17 23:37:11 +0000
+Cannot render console from 10.240.0.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/button.self-126ac9bf0e7f2d8568f8da3a00fd5f0fac6eae0946331003370161fbf8d7975e.js?body=1" for 10.240.1.14 at 2016-10-17 23:37:11 +0000
+Cannot render console from 10.240.1.14! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3d2b1085db6945c1ed2965f6b9561bfd4c3d4bfd17596a955c1ce8b4068f6b3f.css?body=1" for 10.240.0.213 at 2016-10-17 23:37:11 +0000
+Cannot render console from 10.240.0.213! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/modal.self-3e78617ade5663314b7ee0ea10375a5b34d59ffbade44939e3f2a4e4ef2019b3.js?body=1" for 10.240.0.214 at 2016-10-17 23:37:11 +0000
+Cannot render console from 10.240.0.214! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/carousel.self-e47323f363ceb3dc0bdbce05e36e709ed428e339833a41140a85cb0af24b8127.js?body=1" for 10.240.0.33 at 2016-10-17 23:37:11 +0000
+Cannot render console from 10.240.0.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/tab.self-5bf7078b682f8b131332eefa46b45fa5eff2eca745fc0d03e2991450888f7c28.js?body=1" for 10.240.0.33 at 2016-10-17 23:37:11 +0000
+Cannot render console from 10.240.0.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/affix.self-6d6f1a7fc5c8aabf3547fa1b794fab6268f54bc55ad815e55873c71f52513517.js?body=1" for 10.240.1.12 at 2016-10-17 23:37:11 +0000
+Cannot render console from 10.240.1.12! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/scrollspy.self-969f3c5f48cdf1e439c7fa1154c13b948715f5c689f87837c0b64521d3b46ef6.js?body=1" for 10.240.0.214 at 2016-10-17 23:37:11 +0000
+Cannot render console from 10.240.0.214! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/tooltip.self-05afb177e08f98997ccfc84fa08a215e4b27d48d5fe4d049080675e9dffd8199.js?body=1" for 10.240.0.33 at 2016-10-17 23:37:11 +0000
+Cannot render console from 10.240.0.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/popover.self-0aa93860b59fe7393f1dd490f54b3cb994f9d6155adffce034d4e14ae361b041.js?body=1" for 10.240.0.214 at 2016-10-17 23:37:11 +0000
+Cannot render console from 10.240.0.214! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 10.240.0.5 at 2016-10-17 23:37:11 +0000
+Cannot render console from 10.240.0.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 10.240.0.33 at 2016-10-17 23:37:11 +0000
+Cannot render console from 10.240.0.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 10.240.0.214 at 2016-10-17 23:37:11 +0000
+Cannot render console from 10.240.0.214! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.240.0.33 at 2016-10-17 23:37:11 +0000
+Cannot render console from 10.240.0.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/comments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.240.0.214 at 2016-10-17 23:37:11 +0000
+Cannot render console from 10.240.0.214! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.240.0.33 at 2016-10-17 23:37:11 +0000
+Cannot render console from 10.240.0.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 10.240.0.214 at 2016-10-17 23:37:11 +0000
+Cannot render console from 10.240.0.214! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 10.240.0.33 at 2016-10-17 23:37:11 +0000
+Cannot render console from 10.240.0.33! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/dropdown.self-561cca1cbaf67474e01e9536f106bad541594860a6df997004591c1c1957a147.js?body=1" for 10.240.1.30 at 2016-10-17 23:37:11 +0000
+Cannot render console from 10.240.1.30! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/transition.self-6ad2488465135ab731a045a8ebbe3ea2fc501aed286042496eda1664fdd07ba9.js?body=1" for 10.240.0.214 at 2016-10-17 23:37:12 +0000
+Cannot render console from 10.240.0.214! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
