@@ -2,7 +2,7 @@
   "kind": "Template",
   "apiVersion": "v1",
   "metadata": {
-    "name": "rails-pg-persistent",
+    "name": "rails-test",
     "annotations": {
       "description": "An example Rails application with a PostgreSQL database",
       "tags": "quickstart,ruby,rails,postgresql",
@@ -148,7 +148,7 @@
             "imageChangeParams": {
               "automatic": true,
               "containerNames": [
-                "rails-pg-persistent"
+                "rails-test"
               ],
               "from": {
                 "kind": "ImageStreamTag",
@@ -174,7 +174,7 @@
           "spec": {
             "containers": [
               {
-                "name": "rails-pg-persistent",
+                "name": "rails-test",
                 "image": " ",
                 "ports": [
                   {
@@ -261,7 +261,7 @@
       "displayName": "Name",
       "description": "The name assigned to all of the frontend objects defined in this template.",
       "required": true,
-      "value": "rails-pg-persistent"
+      "value": "rails-test"
     },
     {
       "name": "NAMESPACE",

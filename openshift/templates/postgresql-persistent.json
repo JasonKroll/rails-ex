@@ -2,7 +2,7 @@
   "kind": "Template",
   "apiVersion": "v1",
   "metadata": {
-    "name": "rails-pg-persistent",
+    "name": "rails-test",
     "annotations": {
       "description": "An example Rails application with a PostgreSQL database",
       "tags": "quickstart,ruby,rails,postgresql",
@@ -173,7 +173,7 @@
       "displayName": "Name",
       "description": "The name assigned to all of the frontend objects defined in this template.",
       "required": true,
-      "value": "rails-pg-persistent"
+      "value": "rails-test"
     },
     {
       "name": "NAMESPACE",
