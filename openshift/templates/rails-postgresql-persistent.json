@@ -10,7 +10,7 @@
     }
   },
   "labels": {
-    "template": "rails-pg-persistent"
+    "template": "rails-postgresql-persistent"
   },
   "objects": [
     {
@@ -449,7 +449,7 @@
       "displayName": "Git Repository URL",
       "required": true,
       "description": "The URL of the repository with your application source code.",
-      "value": "https://github.com/openshift/rails-ex.git"
+      "value": "https://github.com/JasonKroll/rails-ex.git"
     },
     {
       "name": "SOURCE_REPOSITORY_REF",
